@@ -20,12 +20,13 @@ var getJSONData = function(url){
     showSpinner();
     return fetch(url)
     .then(response => {
-      if (response.ok) {
-        return response.json();
-      }else{
-        throw Error(response.statusText);
-      }
-    })
+      hideSpinner();
+    if (response.ok) {
+      return response.json();
+    }else{
+      throw Error(response.statusText);
+    }
+  })
     .then(function(response) {
           result.status = 'ok';
           result.data = response;
@@ -44,4 +45,5 @@ var getJSONData = function(url){
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
+  
 });
