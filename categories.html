@@ -22,6 +22,14 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <div class="dropdown">
+          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" > <span id="user" class="nav-label">Usuario</span> <span class="caret"></span>  
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" onclick="window.localStorage.clear()" href="login.html">Cerrar Sesión</a>
+          </div>
       </div>
     </nav>
     <main role="main" class="pb-5">
@@ -33,13 +41,13 @@
             <div class="row">
                 <div class="col text-right">
                     <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
-                        <label class="btn btn-light active" id="sortAsc" >
+                        <label class="btn btn-dark active" id="sortAsc" >
                             <input type="radio" name="options" autocomplete="off" checked>A-Z
                         </label>
-                        <label class="btn btn-light" id="sortDesc" >
+                        <label class="btn btn-dark" id="sortDesc" >
                             <input type="radio" name="options" autocomplete="off">Z-A
                         </label>
-                        <label class="btn btn-light" id="sortByCount" >
+                        <label class="btn btn-dark" id="sortByCount" >
                             <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Cant.
                         </label>
                     </div>
@@ -60,14 +68,13 @@
                     </div>
                     <div class="col-3 p-0">
                       <div class="btn-group" role="group">
-                        <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                        <button class="btn btn-dark btn-block" id="rangeFilterCount">Filtrar</button>
                         <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
                       </div>
                     </div>
                   </div>
                 </div>
-            </div>
-            <div class="row">
+              </div>
                 <div class="list-group" id="cat-list-container">
                 </div>
             </div>
