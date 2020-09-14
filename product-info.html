@@ -33,22 +33,94 @@
         </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 13/09/2020) y Entrega 4 (Fecha de entrega: 20/09/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <main>
+    <div class="text-center p-4">
+      <h2>Descripción del producto</h2>
+      <p class="lead">Encontrarás aquí toda la información del producto</p>
+      <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea el producto
+        seleccionado previamente, siempre se visualizará la información del presente: <strong>Chevrolet Onix Joy</strong>.</p>
     </div>
-  </div>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+
+    <div>
+      <h3 class="display-4" id="productName" ></h3>
+      <hr class="my-3">
+      <dl>
+        <dt class="h5">Precio</dt>
+        <dd>
+          <p id="productCost" ></p>
+        </dd>
+
+        <dt class="h5" >Descripción</dt>
+        <dd>
+          <p id="productDescription" ></p>
+        </dd>
+
+        <dt class="h5" >Categoría</dt>
+        <dd>
+          <a id="productCategory"></a>
+        </dd>
+
+        <dt class="h5" >Cantidad de vendidos</dt>
+        <dd>
+          <p id="productsoldCount" ></p>
+        </dd>
+
+        <dt class="h5" >Imágenes ilustrativas</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="productImagesWrapper">
+          </div>
+        </dd>
+      </dl>
+
+      <br>
+
+      <dt class="h5" >Productos relacionados</dt>
+      <dd>
+        <div id="relatedProducts" class="row text-center text-lg-left pt-2" >
+        </div>
+      </dd>
+
+      <br>
+
+
+      <dd>
+        <div id="feed"></div>
+          <div id="newComment">
+            <label for="userEmail">Usuario</label>
+              <input type="email" id="userEmail" placeholder="Ingrese su email..."><br>
+
+              <label for="calificacion">Calificacion:</label>
+              <select id="rating" name="rating"><br>
+                <option value= 5>	&#11088;&#11088;&#11088;&#11088;&#11088;</option>
+                <option value= 4>&#11088;&#11088;&#11088;&#11088;</option>
+                <option value= 3>&#11088;&#11088;&#11088;</option>
+                <option value= 2>&#11088;&#11088;</option>
+                <option value= 1>&#11088;</option>
+              </select>
+            
+            <label for="commentbox">Dejá tu comentario:</label><br>
+            <textarea id="review" form="formulario" rows="4" cols="50" placeholder="Que te pareció el producto?"></textarea>
+
+            <form id="form">
+                
+              </textarea>
+              
+              <br>
+
+              <input type="button" value="Publicar" onclick= "review()">
+
+            </form>
+          </div>
+      </dd>
+
+      <a type="button" class="btn btn-light btn-lg btn-block" href="cart.html">Comprar</a>
+    </div>  
+      </dl>
     </div>
+
+
+
+  </main>
   </footer>
   <div id="spinner-wrapper">
     <div class="lds-ring">
