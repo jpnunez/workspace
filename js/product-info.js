@@ -4,22 +4,30 @@ var productList = [];
 var userComments = [];
 
 
-function showImagesGallery(array){
+function showCarousel(array){
 
     let htmlContentToAppend = "";
+    var activar;
 
     for(let i = 0; i < array.length; i++){
         let imageSrc = array[i];
 
-        htmlContentToAppend += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
-            </div>
-        </div>
-        `
+        if (i == 0) {
+            activar = "active";
+        }    
+        else {
+            activar = "";
+        }
 
-        document.getElementById("productImagesWrapper").innerHTML = htmlContentToAppend;
+        htmlContentToAppend += `
+        <div class="carousel-item ` + activar +`">
+                <img class="d-block w-100 alt align-self-center text-center" src="`+ imageSrc +`" alt="First slide">
+              </div>
+
+        `
+        
+
+        document.getElementById("dinamicCarousel").innerHTML = htmlContentToAppend;
     }
 }
 
@@ -109,7 +117,7 @@ getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
             productsoldCountHTML.innerHTML = product.soldCount;
             productCategoryHTML.innerHTML = '<a href="category-info.html">' + product.category + '</a>';
 
-            showImagesGallery(product.images);
+            showCarousel(product.images);
 
            storeRelProducts(product.relatedProducts);
 

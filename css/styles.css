@@ -139,3 +139,14 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+#newComment {
+  padding-left: 7px;
+}
+
+#dinamicCarousel{
+  height: 80%;
+  width: 80%;
+  position: relative;
+  padding-left: 20%;
+}
