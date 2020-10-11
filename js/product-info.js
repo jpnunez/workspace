@@ -173,7 +173,7 @@ getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
                                     <div>
                                          <div class="row">
                                              <div class="col">
-                                                 <div class="d-flex w-100 justify-content-between">
+                                                 <div class="d-flex justify-content-between align-items-center">
                                                 <span>` + comments.user + ` ` + stars + `</span>
                                                  </div>
                                              <p class="mb-1">` + comments.description + `</p>
