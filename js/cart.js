@@ -1,15 +1,4 @@
 var cartInfo = [];
-
-function subTotalIndividual () {
-    for(let i = 0; i < cartInfo.articles.length; i++){
-        document.getElementsByTagName("input")[i].addEventListener("change", function(){
-
-        document.querySelectorAll(".productSubTotal")[i].innerHTML = (document.querySelectorAll(".productpriceUnit")[i].innerHTML * document.getElementsByTagName("input")[i].value);
-        });
-                        
-    }
-}
-
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -46,6 +35,9 @@ document.addEventListener("DOMContentLoaded", function(e){
                         document.getElementById("productSubtotal").innerHTML = cart.currency + subtotal;
                         document.getElementById("productCostText").innerHTML = cart.currency + subtotal;
                     })
+
+                    document.getElementById("goldradio")
+
         }
     }
 })
