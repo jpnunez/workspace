@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(e){
                     <td><img src="` + cart.src + `" width="50px"></td>
                     <td>`+ cart.name +`</td>
                     <td>`+ cart.currency + "" + cart.unitCost +`</td>
-                    <td><input class="caca" style="width:60px;" type="number"  id="productCount" value="` + cart.count +  `"</td>
+                    <td><input style="width:60px;" type="number"  id="productCount" value="` + cart.count +  `"</td>
                     <td><span id="productSubtotal" style="font-weight:bold;"></span></td>
                     </tr>
                     `
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(e){
                         document.getElementById("productCostText").innerHTML = cart.currency + subtotal;
                     })
 
-                    document.getElementById("goldradio")
+                     
 
         }
     }
