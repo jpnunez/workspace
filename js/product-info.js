@@ -130,15 +130,16 @@ getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
                    for (var i = 0; i < relProducts.length; i++){
                        console.log(productList[relProducts[i]]);
                        htmlContentToAppend += `
+                       <div class="row" >
                        <a href="product-info.html" class="list-group-itemlist-group-item-action">
-                           <div class="d-block mb-4 h-100" onclick="showSpinner()">
-                                <img src="`+ productList[relProducts[i]].imageSrc +`" class="rounded" alt="` + productList[relProducts[i]].description  +`">
-                           <div class="col">
+                           <div class="col" onclick="showSpinner()">
+                                <img src="`+ productList[relProducts[i]].imageSrc +`" class="rounded" alt="` + productList[relProducts[i]].description  +`"</img>
+                           <div class="col" styles="margin-left: auto position:absolute">
                                 <div class="col-md-auto">
-                                    <h4 class="mb-1">` + productList[relProducts[i]].name + ` - ` + productList[relProducts[i]].cost + ` `+ productList[relProducts[i]].currency + `</h4>
+                                    <h4 class="col">` + productList[relProducts[i]].name + ` - ` + productList[relProducts[i]].cost + ` `+ productList[relProducts[i]].currency + `</h4>
                                 <small class="text-muted">` + productList[relProducts[i]].soldCount + ` artículos vendidos</small>
                                 </div>
-                                <p class="mb-1" ` + productList[relProducts[i]].description} + `</p>
+                                <p class="col" ` + productList[relProducts[i]].description} + `</p>
                                 </div>
                             </div>
                        </div>
