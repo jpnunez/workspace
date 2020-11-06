@@ -17,7 +17,12 @@
     <script>
       if (localStorage.length === 0) {
         window.location.assign("login.html");
-      } else {}
+      } 
+      if(localStorage.length === 1){
+        alert("Antes de continuar completa la información de tu perfil!")
+        window.location.assign("my-profile.html")
+      }
+      else {}
     </script>
     <nav class="site-header sticky-top py-1 bg-dark">
       <div class="container d-flex flex-column flex-md-row justify-content-between">

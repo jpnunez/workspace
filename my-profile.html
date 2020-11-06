@@ -34,33 +34,96 @@
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-
-      <div class="dropdown">
-        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" > <span id="user" class="nav-label">Usuario</span> <span class="caret"></span>  
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="cart.html">Mi Carrito</a>
-          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" onclick="window.localStorage.clear()" href="login.html">Cerrar Sesión</a>
-        </div>
-      </div>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
+    <a class="navbar-brand">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="categories.html">Categorías</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="products.html">Productos</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="sell.html">Vender</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle btn btn-danger active" href="" id="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="cart.html">Mi Carrito</a>
+            <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+            <a class="dropdown-item" onclick="window.localStorage.clear()" href="login.html">Cerrar Sesión</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  
+  <div class="container rounded bg-white mt-5">
+    <div class="row">
+        <div class="col-md-4 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><div id="profile-container">
+              <image id="profileImage" src="http://lorempixel.com/100/100" />
+           </div>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+           <input id="imageUpload" type="file" 
+                  name="profile_photo" placeholder="Photo" required="" capture><span class="font-weight-bold" id="nombreYapellido"></span><span class="text-black-50" id="emailProfile"></span><span id="paisProfile"></span></div>
+            
+
+          </div>
+        <div class="col-md-8">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex flex-row align-items-center back"><i class="fa fa-long-arrow-left mr-1 mb-1"></i>
+                        <h6>Editar perfil</h6>
+                    </div>
+                    
+                </div>
+                <form action="" id="dataUsuario">
+                <div class="row mt-2">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Nombre" value="" id="nombrData"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" value="" placeholder="Apellido" id="apellData"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Email" value="" id="emailData" disabled ></div>
+                    <div class="col-md-6"><input type="text" class="form-control" value="" placeholder="Teléfono de contacto  " id="telData"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><input type="text" class="form-control" value="" placeholder="País de residencia" id="paisData"></div>
+                </div>
+                
+                <div class="mt-5 text-right"><button class="btn btn-danger profile-button" type="submit">Guardar cambios</button></div>
+              </form>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+
+
+
+
+
+
+
+  <!-- <div class="container p-5"> -->
+    <!-- <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;"> -->
+      <!-- <h4 class="alert-heading">¡A trabajar! :)</h4> -->
+      <!-- <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p> -->
+      <!-- <hr> -->
+      <!-- <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p> -->
+    <!-- </div> -->
+  <!-- </div> -->
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>

@@ -49,7 +49,9 @@ var getJSONData = function(url){
 document.addEventListener("DOMContentLoaded", function(e){
   var myStr = localStorage.getItem("usuario");
   var myObj = JSON.parse(myStr);
-  var myName = myObj[0].userEmail;
-  document.getElementById("user").innerText = myName;
+  var myEmail = myObj[0].userEmail;
+  document.getElementById("user").innerText = myEmail;
+  document.getElementById("emailData").value = myEmail;
+  document.getElementById("emailProfile").innerText = myEmail;
 });
 
