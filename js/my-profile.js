@@ -21,6 +21,7 @@ var userData = document.getElementById("dataUsuario")
     ;
         window.localStorage.setItem("usuarioData",JSON.stringify(usuarioData));
         alert("Los cambios han sido guardados!")
+        location.reload()
     });
 
 
@@ -58,21 +59,21 @@ document.getElementById("apellData").value = userApellido;
 document.getElementById("telData").value = userTelefono;
 document.getElementById("paisData").value = userPais;
 
-document.getElementById("nombreYapellido").innerText = userNombre + " " + userApellido;
-document.getElementById("paisProfile").innerText = userPais;
+    document.getElementById("nombreYapellido").innerText = userNombre + " " + userApellido;
+    document.getElementById("paisProfile").innerText = userPais;
 
 
     };
 
-function update(){
+// function update(){
 
-    userData.addEventListener("submit",function(){
+    // userData.addEventListener("submit",function(){
 
-        var userString = localStorage.getItem("usuarioData");
-        var userObj = JSON.parse(userString);
-        var userNombre = userObj[0].nombre;
-        var userApellido = userObj[0].apellido;
-        var userPais = userObj[0].pais;
+        // var userString = localStorage.getItem("usuarioData");
+        // var userObj = JSON.parse(userString);
+        // var userNombre = userObj[0].nombre;
+        // var userApellido = userObj[0].apellido;
+        // var userPais = userObj[0].pais;
         // var nombre = localStorage.getItem('usuarioData').split(",")[0];
         // var nombreClean = nombre.replace(/[\]")}[{(]/g, '');
         // var nombreOK = nombreClean.replace("nombre:","");
@@ -85,11 +86,13 @@ function update(){
         // var paisClean = pais.replace(/[\]")}[{(]/g, '');
         // var paisOk = paisClean.replace("pais:","");
 
-    document.getElementById("nombreYapellido").innerText = userNombre + " " + userApellido;
-    document.getElementById("paisProfile").innerText = userPais;
+    // document.getElementById("nombreYapellido").innerText = userNombre + " " + userApellido;
+    // document.getElementById("paisProfile").innerText = userPais;
 
-    })
-};
+    
+
+    // })
+// };
 
 $("#profileImage").click(function(e) {
     $("#imageUpload").click();
@@ -111,7 +114,7 @@ $("#imageUpload").change(function(){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function (e) {
     datos();
-    update();
+    // update();
 
 
 }); 
