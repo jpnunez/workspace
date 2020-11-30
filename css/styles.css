@@ -7,13 +7,13 @@
 }
 
 .jumbotron {
-  height: 50vh;
+  height: 50vh; 
   padding: 5em inherit;
   margin-bottom: 0;
   background-color: #53C0FB;
-  background: url('../img/cover_back.png');
+  background: url('../img/cover_back.png') no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   color: black;
   font-weight: bold;
@@ -180,4 +180,23 @@ a.custom-card:hover {
 #profile-container img {
     width: 150px;
     height: 150px;
+}
+
+
+.navbar-brand img {
+  height: 20px;
+  /* put value of image height as your need */
+  float: left;
+  margin-right: 7px;
+}
+.btn-danger {
+  background-color: #D41B6B;
+}
+
+a:link{
+  color: #D41B6B;
+}
+
+.btn-link {
+  color: #D41B6B;
 }

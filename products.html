@@ -17,30 +17,30 @@
     <body>
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
-        <a class="navbar-brand">
+        <a class="navbar-brand col-sm-3" href="./index.html"><img src="./img/brand.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
               <a class="nav-link" href="index.html">Inicio</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="categories.html">Categorías</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="products.html">Productos</a>
+            <li class="nav-item">
+              <a class="nav-link active" href="products.html">Productos</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="sell.html">Vender</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle btn btn-danger active" href="" id="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle btn btn-danger active" style="background-color: #D41B6B;" href="" id="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown link
               </a>
-              <div class="dropdown-menu btn btn-danger" aria-labelledby="navbarDropdownMenuLink">
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="cart.html">Mi Carrito</a>
                 <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
                 <a class="dropdown-item" onclick="window.localStorage.clear()" href="login.html">Cerrar Sesión</a>
@@ -81,7 +81,7 @@
   
         <div class="container">
           <div class="row">
-              <div class="col">
+              <div class="col text-right">
                   <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
                       <label class="btn btn-dark active" id="priceAsc" >
                         <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-up mr-1"></i>$
@@ -100,7 +100,7 @@
               <div class="col">
                 <div class="row container">
                   <div class="col">
-                    <p class="font-weight-normal text-right my-2">Precio</p>
+                    <p class="font-weight-normal text-left">Precio</p>
                   </div>
                   <div class="col">
                     <input class="form-control" type="number" placeholder="Desde" id="rangeFilterCountMin">

@@ -16,27 +16,41 @@
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-
-      <div class="dropdown">
-        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" > <span id="user" class="nav-label">Usuario</span> <span class="caret"></span>  
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="cart.html">Mi Carrito</a>
-          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" onclick="window.localStorage.clear()" href="login.html">Cerrar Sesión</a>
-        </div>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
+    <a class="navbar-brand col-sm-3" href="./index.html"><img src="./img/brand.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="categories.html">Categorías</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sell.html">Vender</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle btn btn-danger active" style="background-color: #D41B6B;" href="" id="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="cart.html">Mi Carrito</a>
+            <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+            <a class="dropdown-item" onclick="window.localStorage.clear()" href="login.html">Cerrar Sesión</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </nav>
   <main >
-    <div class="text-center p-4">
+    <div class="container text-center p-4">
       <h2>Descripción del producto</h2>
       <p class="lead">Encontrarás aquí toda la información del producto</p>
       <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea el producto
@@ -129,13 +143,13 @@
               
               <br>
 
-              <input type="button" value="Publicar" onclick= "review()">
+              <input class="btn btn-danger" type="button" value="Publicar" onclick= "review()">
 
             </form>
           </div>
       </dd>
 
-      <a type="button" class="btn btn-light btn-lg btn-block" href="cart.html">Comprar</a>
+      <a type="button" class="btn btn-danger btn-lg" href="cart.html">Comprar</a>
     </div>  
       </dl>
     </div>

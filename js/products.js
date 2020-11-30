@@ -57,8 +57,7 @@ function showProductsList(array){
                 <p class="mb-1">' + category.description + '</p>\
                 </div>\
             </div>\
-        </div>\
-    </div>';
+        </div>';
         }
     document.getElementById("products-list").innerHTML = htmlContentToAppend;
     }    
